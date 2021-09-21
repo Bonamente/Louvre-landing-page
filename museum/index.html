@@ -5,8 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>museum</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="page-header">
@@ -49,15 +50,49 @@
 
   <main>
     <section class="welcome">
-      <div class="container">
-        <h2>Welcome to the Louvre</h2>
+      <div class="container welcome__container">
+        <div class="welcome__intro">
+          <h2 class="welcome__title">Welcome <br> to the Louvre</h2>
+          <p class="welcome__text">From the castle to the museum</p>
+          <div class="welcome__link">
+            <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" target="_blank">Discover the Louvre</a>
+          </div>
+          
+        </div>
+
+        <div class="welcome__swiper swiper mySwiper">
+          <div class="welcome__swiper-wrapper swiper-wrapper">
+            <div class="welcome__swiper-slide  swiper-slide">
+              <img class="welcome__swiper-image" src="./assets/img/welcome-slider/1.jpg" alt="Mona Lisa">
+            </div>
+            <div class="swiper-slide">
+              <img class="welcome__swiper-image" src="./assets/img/welcome-slider/2.jpg" alt="Liberty Leading the People">
+            </div>
+            <div class="swiper-slide">
+              <img class="welcome__swiper-image" src="./assets/img/welcome-slider/3.jpg" alt="La Belle Ferronnière (Portrait of an Unknown Woman)">
+            </div>
+            <div class="swiper-slide">
+              <img class="welcome__swiper-image" src="./assets/img/welcome-slider/4.jpg" alt="Raft of the Medusa">
+            </div>
+            <div class="swiper-slide">
+              <img class="welcome__swiper-image" src="./assets/img/welcome-slider/5.jpg" alt="The Astronomer">
+            </div>
+          </div>
+          
+          <div class="welcome__swiper-controls-container">
+            <div class="welcome__swiper-counter">01 | 05</div>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-prev" type="button"></button>
+            <button class="swiper-button-next" type="button"></button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="visiting" id="visiting">
+    <section class="visiting" id="visiting">    
       <div class="container">
         <h2>Virtual tour</h2>
-      </div>
+      </div>      
     </section>
 
     <section class="explore" id="explore">
@@ -91,6 +126,11 @@
     </section>
   </main>
 
-  <footer class="page-footer"></footer>  
+  <footer class="page-footer"></footer>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+  <script src="js/welcome-swiper.js"></script>
 </body>
 </html>
