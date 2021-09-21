@@ -1,3 +1,22 @@
+:root {
+  --bg-dark: #030303;
+  --dark-red: #710707;
+  --gold: #9D8665;
+  --white: #ffffff;
+  --black: #000000;
+  --hover: #9D8665;
+  --active: #7E6C51;
+  
+  --font-size-base: 22px;
+  --font-family-main: "Roboto", "Arial", sans-serif;
+  --font-family-headings: "Forum", "Times New Roman", serif;
+  --font1: 80px;
+  --font2: 32px;
+  --font3: 28px;
+  --font4: 22px;
+  --font5: 18px;  
+}
+
 @font-face {
   font-family: Roboto;
   src: url("assets/fonts/Roboto-Thin.ttf");
@@ -33,3 +52,128 @@
    src: url("assets/fonts/Forum-Regular.ttf");
    font-weight: 400;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {  
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-base);  
+  font-weight: 300;
+  line-height: 26px;
+  color: var(--black);  
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border-width: 0;
+
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 150px;
+  background-color: var(--bg-dark);
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;  
+  width: 1440px;
+}
+
+.page-header__logo {
+  display: flex;
+  width: 199px;
+}
+
+.page-header__logo-image {
+  display: block;
+  width: 49px;
+  height: 26px;
+}
+
+.page-header__logo-text {
+  margin-left: 25px;
+
+  font-family: var(--font-family-headings);
+  font-size: var(--font3);
+  line-height: 31px;
+  color: var(--white);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  padding-top: 4px; 
+
+  list-style-type: none;
+}
+
+.main-nav__item:not(:last-of-type) {
+  margin-right: 55px;
+}
+
+.main-nav__item a {
+  font-size: var(--font4);
+  font-weight: 100;  
+  color: var(--white);  
+  letter-spacing: 2px;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:focus {
+  color: var(--hover);
+}
+
+.main-nav__item a:active {
+  color: var(--active);
+}
+
