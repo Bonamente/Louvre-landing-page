@@ -59,9 +59,9 @@
           </div>          
         </div>
 
-        <div class="welcome__swiper swiper mySwiper">
+        <div class="welcome__swiper swiper">
           <div class="welcome__swiper-wrapper swiper-wrapper">
-            <div class="welcome__swiper-slide  swiper-slide">
+            <div class="swiper-slide">
               <img class="welcome__swiper-image" src="./assets/img/welcome-slider/1.jpg" alt="Mona Lisa">
             </div>
             <div class="swiper-slide">
@@ -75,11 +75,15 @@
             </div>
             <div class="swiper-slide">
               <img class="welcome__swiper-image" src="./assets/img/welcome-slider/5.jpg" alt="The Astronomer">
-            </div>
+            </div>            
           </div>
           
           <div class="welcome__swiper-controls-container">
-            <div class="welcome__swiper-counter">01 | 05</div>
+            <div class="welcome__swiper-counter">
+              <span class="current-slide-number">01</span>
+              <span class="welcome__counter-divider">|</span>
+              <span class="total-number">05</span>
+            </div>            
             <div class="swiper-pagination"></div>
             <button class="swiper-button-prev" type="button"></button>
             <button class="swiper-button-next" type="button"></button>
@@ -151,8 +155,16 @@
     </section>
 
     <section class="explore" id="explore">
-      <div class="container">
-        <h2>Picture explore</h2>
+      <div class="container explore__container">
+        <div class="explore__descritpion">
+          <h2 class="explore__title underline-title">Picture explore</h2>
+          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+          <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+        </div>
+        <div class="explore__image">
+          <img class="visiting__image" src="./assets/img/explore-slider/before.jpg" alt="" width="720" height="700">
+        </div>        
       </div>
     </section>
 
@@ -185,7 +197,8 @@
 
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Initialize Swiper -->
+
+  <!-- Initialize Swiper -->
   <script src="js/welcome-swiper.js"></script>
 </body>
 </html>

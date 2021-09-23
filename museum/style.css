@@ -358,6 +358,10 @@ h2 {
   font-weight: 400;
 }
 
+.welcome__counter-divider {
+  margin: 0 5px;
+}
+
 .swiper-pagination {
   position: static;
   z-index: unset;
@@ -444,8 +448,7 @@ h2 {
   margin: 75px 0;
 }
 
-.visiting__title {
-  /* margin-top: 75px; */
+.visiting__title {  
   margin-bottom: 103px;
 
   color: var(--gold);
@@ -554,5 +557,40 @@ h2 {
   width: 100%;  
 }
 
+/* EXPLORE STYLES */
+
+.explore {
+  padding: 75px 0;
+
+  color: var(--white);
+
+  background-color: var(--bg-dark);
+}
+
+.explore__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore__descritpion {
+  width: 660px
+}
+
+.explore__title {
+  margin-bottom: 103px;
+}
+
+.explore__image {
+  width: 720px;
+  padding-top: 15px;
+}
+
+.explore__descritpion p {
+  margin-bottom: 27px;
+  padding-right: 1px;
+
+  font-size: var(--font4);
+  line-height: 38px;
+}
 
 
