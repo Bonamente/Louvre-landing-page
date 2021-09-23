@@ -170,7 +170,66 @@
 
     <section class="video" id="video">
       <div class="container">
-        <h2>Video journey</h2>
+        <div class="video__intro">
+          <h2 class="video__title">Video journey</h2>
+          <p class="video-description">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+        </div>
+
+        <div class="video__playlist">
+          <div class="video__wrapper">       
+            <img class="video__content" src="./assets/video/poster0Mine.png" alt="Louvre">
+                
+            <div class="video__controls">    
+              <button class="video__button video__button--play" type="button">
+                <span class="sr-only">Play video</span>        
+              </button>
+
+              <label class="sr-only" for="video">Video progress bar</label>
+              <input class="video__progress video__progress--video" type="range" value="54" min="0" max="100" step="1" id="video">              
+    
+              <button class="video__button video__button--volume" type="button">
+                <span class="sr-only">Turn on/off sound</span>    
+              </button>
+
+              <label class="sr-only" for="volume">Volume progress bar</label>
+              <input class="video__progress video__progress--volume" type="range" value="40" min="0" max="100" step="1" id="volume">
+    
+              <button class="video__button video__button--fullscreen" type="button">
+                <span class="sr-only">Expand to full screen/collapse</span>  
+              </button>
+            </div>
+          </div>
+
+          <div class="video__swiper swiper2">
+            <div class="video__swiper-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/zp1BXPX8jcU" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+
+              <div class="swiper-slide">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/Vi5D6FKhRmo" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+
+              <div class="swiper-slide">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/NOhDysLnTvY" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+
+              <div class="swiper-slide">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/aWmJ5DgyWPI" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>
+
+              <div class="swiper-slide">
+                <iframe width="452" height="254" src="https://www.youtube.com/embed/2OR0OCr6uRE" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              </div>            
+            </div>
+            
+            <div class="video__swiper-controls-container">            
+              <button class="swiper-btn-prev" type="button"></button>
+              <div class="video__swiper-pagination"></div>
+              <button class="swiper-btn-next" type="button"></button>
+            </div>
+          </div>
+        </div>  
       </div>
     </section>
 
@@ -195,10 +254,13 @@
 
   <footer class="page-footer"></footer>
 
-
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <!-- Initialize Swiper -->
   <script src="js/welcome-swiper.js"></script>
+  <script src="js/video-swiper.js"></script>
+
+
+  <script src="js/progress-bar.js"></script>
 </body>
 </html>
