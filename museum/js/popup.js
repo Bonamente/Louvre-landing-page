@@ -21,3 +21,4 @@ const handleClick = (e) => {
 
 buyButton.addEventListener('click', handleClick);
 closeButton.addEventListener('click', handleClick);
+overlay.addEventListener('click', handleClick);
