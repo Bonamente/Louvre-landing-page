@@ -1600,6 +1600,7 @@ h2 {
   visibility: hidden;
   
   box-sizing: border-box;
+
   width: 1440px;
   height: 845px;
   margin: 0 auto;
@@ -2521,12 +2522,7 @@ span.ripple {
     width: 60%;    
     height: 100px; 
     padding-left: 3%;
-    padding-right: 3%;
-  
-    /* width: 600px;
-    height: 120px; */
-    /* padding-left: 74px;
-    padding-right: 75px; */  
+    padding-right: 3%;  
   }
 
   .welcome__swiper-counter {  
@@ -2570,9 +2566,8 @@ span.ripple {
   }
 
   .welcome__link a {  
-    padding: 13px 15px;
-  
-    /* font-size: var(--font5);     */
+    padding: 13px 15px;  
+   
     letter-spacing: 1px; 
     
     border-radius: 5px;   
@@ -2609,10 +2604,16 @@ span.ripple {
     padding-right: 1px;
     font-size: var(--font5);
     line-height: 28px;
-}
+  }
 
+  .popup {
+    width: 960px;
+    height: 700px;
+    padding: 5px 5px;
+  }
 
-
-  
+  .overview__wrapper {
+    padding-right: 40px;
+  }
 }
 
