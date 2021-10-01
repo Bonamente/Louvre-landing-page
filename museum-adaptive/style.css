@@ -795,9 +795,18 @@ h2 {
   display: block;
   width: 100%;
   /* height: 650px;  */
-
-  object-fit: fill;
+/* 
+  object-fit: fill; */
 }
+  
+.video__content img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
 
 .video__button--main-play {
   position: absolute;
@@ -810,7 +819,7 @@ h2 {
   width: 220px;
   height: 220px;
 
-  background-image: url("./assets/img/play-video-main.png");
+  background-image: url("./assets/svg/play-video-main.svg");
   background-repeat: no-repeat;
   background-position: center;
 
@@ -1172,8 +1181,6 @@ h2 {
   box-sizing: border-box;
   width: 50%;
   padding-top: 7.15%;
-/* 
-  padding-top: 103px; */
 }
 
 .tickets__image img {
@@ -1538,7 +1545,7 @@ h2 {
   
   columns: 2;
   column-gap: 125%;
-  column-gap: 155px;
+  /* column-gap: 155px; */
 
   list-style: none;
 }
@@ -2661,15 +2668,21 @@ span.ripple {
 /* ------- TABLET STYLES ------- */
 
 @media (max-width: 1025px) {
+  .container {
+    box-sizing: content-box;
+    padding: 0 20px;
+  }
+
   h2 {
     font-family: var(--font-family-headings);
     font-size: var(--font1);
     line-height: 75px;
+    letter-spacing: 5px;
   }
 
-  .container {
-    padding: 0;
-  }
+  .underline-title::after {   
+    bottom: -23px; 
+  }  
 
   .page-header {  
     min-height: 130px;   
@@ -2731,7 +2744,7 @@ span.ripple {
 
   .main-nav--opened {
     visibility: visible;
-    left: 0;   
+    left: 20px;   
   } 
 
   .main-nav--opened .main-nav__icon {    
@@ -2774,7 +2787,7 @@ span.ripple {
 
   .page-header__container.nav-closed .nav-toggle::before {
     position: absolute;
-    top: 6px;
+    top: 7px;
     right: 0;
 
     content: "";
@@ -2793,16 +2806,15 @@ span.ripple {
   }
 
   .welcome__intro {
-    top: 48px;   
+    top: 49px;   
 
-    padding-left: 0;  
+    padding-left: 20px;  
   }
 
   .welcome__title {  
     margin-bottom: 6%;
 
-    line-height: 90px;
-    letter-spacing: 5px;
+    line-height: 90px;    
   }
 
   .welcome__text {   
@@ -2833,7 +2845,7 @@ span.ripple {
 
   .welcome .welcome__swiper-controls-container {
     width: 100%;
-    padding-top: 15px;
+    padding-top: 19px;
     padding-right: 0;
     padding-left: 31.8%; 
   }
@@ -2869,6 +2881,375 @@ span.ripple {
     margin-right: 25px;  
   }
 
+  .visiting {
+    margin: 60px 0;
+  }
 
+  .visiting__title {  
+    margin-bottom: 83px;   
+  }
+
+  .visiting__list { 
+    justify-content: center;
+    gap: 60px 108px; 
+  }
+  
+  .visiting__item {
+    width: 330px;
+    min-height: 345px;   
+  } 
+  
+  .visiting__subtitle {
+    margin-top: 26px;
+    margin-bottom: 22px;
+  
+    font-size: var(--font2);
+    line-height: 31px;  
+    letter-spacing: 3px;
+  }
+  
+  .visiting__subtitle::after {
+    bottom: -12px;
+
+    width: 150px;  
+  }
+  
+  .visiting__desc {  
+    font-size: var(--font4);
+    line-height: 23px;
+  }
+  
+  .visiting__service {
+    font-size: var(--font5);
+    line-height: 19px;
+  }
+
+  .explore {
+    padding: 60px 0;
+  }
+
+  .explore__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: unset;
+  }
+
+  .explore__descritpion { 
+    width: 100%;   
+  }
+
+  .explore__title {
+    margin-bottom: 8.4%;   
+  }
+
+  .explore__descritpion p {
+    margin-bottom: 0;
+
+    font-size: var(--font4);
+    line-height: 38px;
+  }
+
+  .explore__descritpion .only-desktop {
+    display: none;
+  }
+
+  .explore__image {
+    width: 73.17%;
+    height: 71.14%;
+    padding-top: 57px;
+    margin: 0 auto;
+  }
+
+  .video {
+    padding: 60px 0 58px;
+  }
+
+  .video__intro {
+    margin-bottom: 4.1%;
+  }
+
+  .video-description {
+    display: none;
+  }
+  
+  .video__content {  
+    height: 444px;    
+  }
+  
+  .video__button--main-play {   
+    width: 152px;
+    height: 152px;  
+  
+    background-size: cover;
+  }
+  
+  .video__controls {
+    height: 60px;
+    padding-left: 4%;
+    padding-right: 1.7%;
+  }  
+  
+  .video__button--play {  
+    margin-right: 3.2%;  
+  }
+  
+  .video__button--volume {
+    width: 26px;
+    height: 21px;
+    margin-right: 3.2%;
+  }
+  
+  .video__button--fullscreen {
+    width: 26px;
+    height: 26px;
+    margin-left: 3%;   
+  }
+  
+  .video__progress--video {
+    width: 60.7%;
+    margin-right: 3.3%;
+  }
+  
+  .video__progress--volume {
+    width: 15.3%;
+  }
+
+  .video__swiper {   
+    margin-top: 4%;    
+  }
+
+  .video__swiper .swiper-slide--video { 
+    height: 170px; 
+  }
+
+  .gallery__title {
+    padding: 60px 0;    
+  }
+
+  .gallery__picture-container {
+    height: 1265px; 
+  }
+
+  .gallery__picture-inner-container::after {   
+    top: 1030px;
+    height: 239px; 
+  }
+
+  .tickets__container {
+    padding-top: 60px;
+  }
+
+  .tickets__inner-container {
+    justify-content: unset;
+  }
+
+  .tickets__form .type-form {
+    display: none;
+  }
+
+  .tickets__image {    
+    width: 71.14%;    
+    margin-right: 80px;
+    padding-top: 8.5%;
+
+  }
+
+  .tickets__form {   
+    width: 17.8%;  
+    padding-top: 8.5%;
+  }
+
+  .amount-form {
+    width: 175px;
+  }
+ 
+  .amount-form__title {
+   margin-bottom: 30px;
+
+    font-size: var(--font2);
+    text-align: left;
+  }
+
+  .amount-form__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  .amount-form__inner-cotainer {
+    justify-content: space-between;
+    width: 175px;    
+    margin-top: 9px;   
+  }
+
+  .amount-form__total {
+    margin-top: 25px;
+  
+    font-size: var(--font2);   
+  }
+
+  .amount-form__sum {
+    margin-left: 16px;
+  }
+
+  .form__buy-btn {
+    margin-top: 69px;  
+  }
+
+  .parallax {  
+    margin-top: 60px;
+
+    background-position: center bottom;    
+  }
+
+  .contacts {
+    padding: 60px 0 56px; 
+  }
+
+  .contacts__title { 
+    margin-bottom: 83px;   
+  }  
+ 
+  .contacts__subtitle {
+    margin-bottom: 35px;
+  
+    font-size: var(--font3);
+    line-height: 28px;
+    font-weight: 500;
+  }
+  
+  .contacts p {
+    font-size: var(--font4);
+    line-height: 23px;
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
+  
+  .contacts__map {
+    width: 70.53%;
+    height: 46.14%;
+  }
+
+  .page-footer {
+    padding-top: 60px;
+    padding-bottom: 50px;  
+  } 
+  
+  .page-footer::after {    
+    top: 243px;   
+  } 
+  
+  .page-footer__logo {  
+    margin-right: 4.1%;    
+    padding-top: 0;
+  }
+
+  .page-footer__logo-text {   
+    font-size: var(--font2);  
+  }
+  
+  .page-footer-nav {
+    padding-top: 6px;
+  }
+  
+  .page-footer-nav__list {   
+    column-gap: 101%;   
+  } 
+
+  .page-footer-nav a {
+    font-size: var(--font-size-base);   
+    line-height: 26px; 
+  }
+  
+  .social { 
+    padding-bottom: 25px;
+  }  
+  
+  .page-footer__copyright { 
+    padding-top: 78px;
+  }
+
+  .copyright__link,
+  .copyright__year {    
+    font-size: var(--font-size-base);
+    line-height: 22px;
+  }
+
+  .popup {  
+    width: 1024px;
+    height: 768px;    
+    padding: 75px 27px 30px;
+
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+
+  .popup__close-button {
+    position: absolute;
+    top: 30px;
+    right: 28px;
+  
+    width: 25px;
+    height: 25px;    
+ 
+    background-position: center; 
+  }
+
+  .popup-left {
+    box-sizing: border-box;
+    width: 400px;
+    margin-right: 40px;
+  }
+  
+  .popup-right {
+    box-sizing: border-box;
+    width: 530px;
+    padding: 23px 30px 25px;
+  }
+
+  .overview__wrapper {
+    padding-right: 0;
+  }
+
+  .details-form__text {  
+    font-family: var(--font-family-main);
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .details-form__text::after {
+    bottom: 59px;
+  }
+
+  .details-form__item--date::before,
+  .details-form__item--time::before,
+  .popup__form .details-form__name-input,
+  .popup__form .details-form__mail-input,
+  .popup__form .details-form__phone-input,
+  .details-form__select,
+  .details-form__select option,
+  .popup-amount-form__title,
+  .popup-amount-form__item label,
+  .popup-form .popup-amount-form__input,
+  .popup-amount-form__button,
+  .overview__date,
+  .overview__time,
+  .overview__ticket-type,
+  .total__basic-amount,
+  .total__senior-amount {   
+    font-size: 18px;
+  }
+
+  .popup-right .overview__title,
+  .price {
+    font-size: 32px;  
+  }
+
+  .overview__title  + p {
+    font-size: var(--font-size-base);
+    font-weight: 500;  
+  }
+
+  .popup-form__submit-button { 
+    font-size: var(--font-size-base);   
+  }
 
 }

@@ -204,7 +204,7 @@
           <h2 class="explore__title underline-title">Picture explore</h2>
           <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
           <p>It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
-          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+          <p class="only-desktop">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
         </div>
         
         <div class="explore__image">
@@ -231,8 +231,16 @@
         </div>
 
         <div class="video__playlist">
-          <div class="video__wrapper">       
-            <img class="video__content" src="./assets/video/poster0Mine.png" alt="Louvre">
+          <div class="video__wrapper">
+            <div class="video__content">
+              <picture>              
+                <source media="(min-width: 1025px)" srcset="./assets/video/poster-desktop.png">          
+                <img src="./assets/video/poster0.jpg" alt="Louvre">
+              </picture>
+            </div>
+       
+
+            <!-- <img class="video__content" src="./assets/video/poster-desktop.png" alt="Louvre"> -->
             <button class="video__button video__button--main-play" type="button">
               <span class="sr-only">Play video</span>  
             </button>
@@ -305,7 +313,10 @@
         <h2 class="tickets__title underline-title">Buy tickets</h2>
         <div class="tickets__inner-container">
           <div class="tickets__image">
-            <img src="./assets/img/buy-tickets/1.png" alt="" loading="lazy">
+            <picture>              
+              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.png">          
+              <img src="./assets/img/buy-tickets/aeneas-1024.png" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
+            </picture>          
           </div>
   
           <form class="tickets__form form">
@@ -382,7 +393,10 @@
           </div>
 
           <div class="contacts__map">
-            <img class="contacts__image" src="./assets/img/map.png" alt="Louvre-address"> 
+            <picture>              
+              <source media="(min-width: 1025px)" srcset="./assets/img/map.png">          
+              <img src="./assets/img/map-1024.png" alt="The Louvre on the map of Paris" loading="lazy">
+            </picture>
           </div>
 
         </div>
