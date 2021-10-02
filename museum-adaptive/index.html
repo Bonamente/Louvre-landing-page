@@ -96,7 +96,7 @@
             <li class="pictures__item"></li>      
           </ul>
   
-          <div class="main-nav__social social">
+          <div class="main-nav__social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--youtube" href="https://www.youtube.com/user/louvre" target="_blank" rel="noopener noreferrer">
@@ -265,7 +265,10 @@
         </div>
         
         <div class="explore__image">
-          <img src="./assets/img/explore-slider/Group84.png" alt="Las Meninas (Diego Velázquez)">
+          <picture>              
+            <source media="(min-width: 769px)" srcset="./assets/img/explore-slider/Group84.png">          
+            <img src="./assets/img/explore-slider/Group 51.png" alt="Las Meninas (Diego Velázquez)">
+          </picture>
         </div>
         
         <!-- <div class="explore__comp-container">
@@ -295,9 +298,7 @@
                 <img src="./assets/video/poster0.jpg" alt="Louvre">
               </picture>
             </div>
-       
-
-            <!-- <img class="video__content" src="./assets/video/poster-desktop.png" alt="Louvre"> -->
+          
             <button class="video__button video__button--main-play" type="button">
               <span class="sr-only">Play video</span>  
             </button>
@@ -371,8 +372,9 @@
         <div class="tickets__inner-container">
           <div class="tickets__image">
             <picture>              
-              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.png">          
-              <img src="./assets/img/buy-tickets/aeneas-1024.png" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
+              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.png">
+              <source media="(min-width: 1024px)" srcset="./assets/img/buy-tickets/aeneas-1024.png">           
+              <img src="./assets/img/buy-tickets/aeneas-768.png" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
             </picture>          
           </div>
   
@@ -451,8 +453,9 @@
 
           <div class="contacts__map">
             <picture>              
-              <source media="(min-width: 1025px)" srcset="./assets/img/map.png">          
-              <img src="./assets/img/map-1024.png" alt="The Louvre on the map of Paris" loading="lazy">
+              <source media="(min-width: 1025px)" srcset="./assets/img/map.png">
+              <source media="(min-width: 1024px)" srcset="./assets/img/map-1024.png">       
+              <img src="./assets/img/map-768.png" alt="The Louvre on the map of Paris" loading="lazy">
             </picture>
           </div>
 
