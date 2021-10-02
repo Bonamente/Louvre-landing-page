@@ -36,6 +36,21 @@
     --grid-column-gap: 36px;  
   }
 }
+
+@media (max-width: 1000px) {
+  :root {  
+    --font1: 40px;
+    --font2: 22px;
+    --font3: 20px;
+    --font4: 18px;
+  
+    --container-width: 96.1%;
+  
+    --grid-row-gap: 24px;
+    --grid-column-gap: 36px;  
+  }
+}
+
 @font-face {
   font-family: Roboto;
   src: url("assets/fonts/Roboto-Thin.ttf");
@@ -2543,9 +2558,7 @@ span.ripple {
 }
 
 
-/*+++++++++++++++++++ ADAPTIVE STYLES ++++++++++++++++++++++*/
-
-/*------- DESKTOP-RESPONSIVE STYLES ------ */
+/*+++++++++++++++++++ RESPONSIVE STYLES ++++++++++++++++++++++*/
 
 @media (max-width: 1460px) {
   h2 {    
@@ -3252,4 +3265,85 @@ span.ripple {
     font-size: var(--font-size-base);   
   }
 
+}
+
+/* ------------------------------------------------ */
+
+@media (max-width: 1000px) {  
+  h2 {    
+    line-height: 60px;    
+  }
+
+  .main-nav { 
+    min-height: 400px;
+  }
+
+  .welcome__intro {
+    top: 20px;  
+  }
+
+  .welcome__title {  
+    margin-bottom: 6%;
+
+    line-height: 60px;    
+  }
+
+  .welcome__link {
+    width: 200px;
+    margin-top: 50px;  
+  }
+
+  .welcome__link a {    
+    padding: 10px 20px;  
+       
+    line-height: 21px;
+  }
+
+  .welcome .welcome__swiper-controls-container { 
+    padding-left: 25%
+  }
+
+  .visiting__list {  
+    gap: 60px; 
+  }
+
+  .tickets__image {
+    width: 65%;
+    margin-right: 8.13%;
+    padding-top: 8.5%;
+  }
+
+  .page-footer::after {    
+    top: 65.7%;   
+  } 
+
+  .page-footer__inner-container {
+    flex-wrap: wrap; 
+  }
+
+  .page-footer-nav {
+    padding-right: 15%;
+  }
+
+  .popup {
+    width: 100%;
+  }
+
+  .popup__form {  
+    flex-direction: column;
+    align-items: center;    
+  }
+
+  .popup-left {   
+    width: 530px;
+    margin-right: 0;
+  }
+
+  .details-form__item--date, .details-form__item--time {
+    width: 251px;
+  }
+
+  .popup-right {  
+    margin-top: 51px;
+  }
 }
