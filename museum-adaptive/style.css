@@ -3368,11 +3368,11 @@ span.ripple {
   }
 
   .page-header__logo {
-    padding-top: 35px;
+    padding-top: 4.9%;
   }
 
   .page-header__logo-image { 
-    padding-top: 5px;
+    padding-top: 3%;
   }
 
   .page-header__logo-text {
@@ -3386,8 +3386,13 @@ span.ripple {
 
   .main-nav {
     width: 100%;
-    min-height: 1000%;
-    padding: 28px 55px 35px;    
+    min-height: auto;
+    /* padding: 28px 55px 35px; */
+    /* padding: 3.7%, 7.1%, 2.1%; */
+    padding-top: 3.7%;
+    padding-left: 7.1%;
+    padding-right: 7.1%;
+    padding-bottom: 2%;
   }
 
   .main-nav--opened {  
@@ -3399,13 +3404,17 @@ span.ripple {
   }
 
   .main-nav__list {
-    padding-bottom: 10px;
+    padding-bottom: 1.7%;
   }
 
   .main-nav__item {
-    margin-bottom: 25px;
+    margin-bottom: 3.8%;
     padding-left: 0;
     padding-right: 81.6%;
+  }
+
+  .main-nav__item:first-child {
+    padding-top: 4.6%;
   }
 
   .main-nav__item a {
@@ -3421,9 +3430,9 @@ span.ripple {
     justify-content: space-between;
 
     width: 100%;
-    min-height: 355px;
+    /* min-height: 355px; */
     margin: 0;
-    margin-bottom: 70px;
+    margin-bottom: 9.6%;
     padding: 0;
 
     list-style-type: none;
@@ -3431,7 +3440,7 @@ span.ripple {
 
   .pictures::after {
     position: absolute;
-    bottom: -36px;
+    bottom: -8%;
     left: 0;
 
     content: "";
@@ -3444,37 +3453,31 @@ span.ripple {
 
   .pictures__item {
     width: 48.5%;
-    height: 161px;
-    background-color: greenyellow;
+    /* height: 161px;    */
   }
 
   .pictures__item:first-of-type {
     width: 100%;
-    height: 194px;
-    margin-bottom: 20px;
-
-    background-image: url("./assets/img/burger-menu/burger-img1.png");
-  }
-
-  .pictures__item:nth-child(2) {
-    background-image: url("./assets/img/burger-menu/burger-img2.png");
-  }
-
-  .pictures__item:nth-child(3) {
-    background-image: url("./assets/img/burger-menu/burger-img3.png");
+    /* height: 194px; */
+    margin-bottom: 2%;
   }
 
   .main-nav__social {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: unset;
     padding-bottom: 0;
   }
 
   .main-nav__social .social__list {
+    display: flex;
+    justify-content: space-between;
     width: 340px;
-    margin: 0 auto;
   }
 
-  .main-nav__social .social__item:first-child {
-    margin-left: 0;
+  .main-nav__social .social__item {
+    margin: 0;
   }
 
   .welcome__container {   
@@ -3483,7 +3486,7 @@ span.ripple {
   }
 
   .welcome__link {
-   display: none;
+    display: none;
   }
 
   .welcome__intro {
@@ -3806,18 +3809,18 @@ span.ripple {
     letter-spacing: 2;
   }
   
-  .social {
-    margin-top: 25px;
+  .page-footer__social {
+    margin-top: 3.5%;
     margin-left: 37.6%;
-    padding-bottom: 25px;
+    padding-bottom: 3.1%;
   }
 
-  .social__list {
-   width: 340px;
+  .page-footer__social .social__list {
+   width: auto;
   }  
   
   .page-footer__copyright { 
-    padding-top: 56px;
+    padding-top: 8%;
   }
 
   .popup {
@@ -3871,3 +3874,217 @@ span.ripple {
     margin-top: 67px;
   }
 }
+
+
+/* 668px STYLES */
+
+@media (max-width: 668px) {
+  .main-nav {  
+    padding-bottom: 38%;
+  }
+
+  .main-nav__list {
+    padding-left: 5%;
+    padding-bottom: 5%;
+  }
+
+  .main-nav__item {
+    padding-right: 68%;
+  }
+
+  .pictures {
+    justify-content: space-around;
+  }
+
+  .pictures__item {
+    width: 95px;    
+  }
+
+  .pictures__item:first-of-type {
+    width: 95px;    
+    margin-bottom: 0;  
+  }
+
+  .welcome__swiper-counter {
+    font-size: 16px;
+  }
+
+  .video__swiper .swiper-slide--video {
+    height: 145px;
+  }
+
+  .tickets__inner-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tickets__form {
+    width: 100%;
+  }
+
+  .form__container {
+    width: 100%;    
+    justify-content: center;
+  }
+
+  .tickets__image {
+    width: 80%;
+    margin-right: 0;
+  }
+
+  .amount-form__title {  
+    text-align: center;
+  }
+
+  .form__submit {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form__buy-btn {
+    margin-left: unset;  
+  }
+
+  .page-footer__inner-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-footer-nav {
+    margin: 0 auto;
+    padding-right: 0;
+  }
+
+  .page-footer-nav__list {  
+    columns: 3;
+    column-gap: 5%;    
+  } 
+
+  .page-footer__social {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: unset;
+    padding-bottom: 0;
+  }
+
+  .page-footer__social .social__list {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+  }
+
+  .page-footer__social .social__item {
+    margin: 0;
+  }
+
+  .copyright--school {
+    display: none;
+  }
+
+  .popup {
+    width: 420px;
+    height: 1754px;
+    padding: 79px 30px 50px;  
+  }
+
+  .popup-left {   
+    width: 360px;    
+  }
+
+  .popup-right {    
+    width: 360px;
+    margin-top: 48px;
+    padding: 25px 15px;    
+  }
+
+  .details-form__title {
+    padding-top: 41px;
+
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .details-form__item {
+    margin-bottom: 20px;
+  }
+
+  .details-form__item--combined {    
+    flex-wrap: wrap;
+    justify-content: unset;
+  }
+
+  .details-form__item--date, 
+  .details-form__item--time {
+    width: 100%;    
+  }
+
+  .details-form__item--date {
+    margin-bottom: 20px; 
+  } 
+
+  .details-form__text {    
+    margin-top: 16px;
+    padding-bottom: 52px;    
+    font-size: var(--font4);
+    line-height: 21px;    
+  }
+
+  .details-form__text::after {
+    bottom: 40px;
+
+    background-color: #740C11;   
+  }
+
+  .overview__image {
+    width: 120px;
+    height: 96px;
+  }
+
+  .card-form {    
+    padding-top: 12px;
+    padding-left: 19px;
+  }
+
+  .card-form::before {   
+    left: -1px;
+    top: 6px;   
+    
+    width: 330px;
+    height: 209px;
+    background-image: url("./assets/img/popup/card-front-side-420.png");  
+  }
+
+  .card-form::after {   
+    left: 0;
+    top: 118%;    
+    
+    width: 330px;
+    height: 209px;
+    background-image: url("./assets/img/popup/card-flip-side-420.png");   
+  }
+
+  .card-form__name-input {
+    width: 290px;
+  }
+
+  .card-form__item--cvc {
+    top: 160.4%;
+    right: 31px;
+  }
+
+  .card-form__item--cvc label {
+    padding-left: 12px;
+  }
+
+  .cvv-text {    
+    padding-left: 13px;
+  }
+
+  .popup-form__submit-button {
+    margin-top: 287px;
+  }
+
+}
+
+
