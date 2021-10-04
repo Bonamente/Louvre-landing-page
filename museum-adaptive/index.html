@@ -93,20 +93,20 @@
           <ul class="main-nav__pictures-list pictures">
             <li class="pictures__item">
               <picture>              
-                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img1.png">          
-                <img src="./assets/img/burger-menu/burger-img1-420.png" alt="">
+                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img1.jpg">          
+                <img src="./assets/img/burger-menu/burger-img1-420.jpg" alt="">
               </picture>             
             </li>
             <li class="pictures__item">
               <picture>              
-                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img2.png">          
-                <img src="./assets/img/burger-menu/burger-img3-420.png" alt="">
+                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img2.jpg">          
+                <img src="./assets/img/burger-menu/burger-img3-420.jpg" alt="">
               </picture> 
             </li>
             <li class="pictures__item">
               <picture>              
-                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img3.png">          
-                <img src="./assets/img/burger-menu/burger-img2-420.png" alt="">
+                <source media="(min-width: 669px)" srcset="./assets/img/burger-menu/burger-img3.jpg">          
+                <img src="./assets/img/burger-menu/burger-img2-420.jpg" alt="">
               </picture>            
             </li>      
           </ul>
@@ -281,8 +281,8 @@
         
         <div class="explore__image">
           <picture>              
-            <source media="(min-width: 769px)" srcset="./assets/img/explore-slider/Group84.png">          
-            <img src="./assets/img/explore-slider/Group51.png" alt="Las Meninas (Diego Velázquez)">
+            <source media="(min-width: 769px)" srcset="./assets/img/explore-slider/Group84.jpg">          
+            <img src="./assets/img/explore-slider/Group51.jpg" alt="Las Meninas (Diego Velázquez)">
           </picture>
         </div>
         
@@ -341,25 +341,55 @@
 
           <div class="video__swiper swiper2">
             <div class="video__swiper-wrapper swiper-wrapper">
+              <!--the order of the slides is changed only for level 2. At level 3, return the order back.-->
+              <div class="swiper-slide swiper-slide--video">
+                <a class="video__link video__link--4" href="https://www.youtube.com/embed/aWmJ5DgyWPI">
+                  <img class="video__media--sw" src="https://i.ytimg.com/vi/aWmJ5DgyWPI/maxresdefault.jpg" alt="Exposition - Le Corps et l'Âme. De Donatello à Michel-Ange. Sculptures italiennes de la Renaissance"> 
+                </a>
+                
+                <button class="video__button--sw" aria-label="Play video">
+                  <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
+              </div>  
+
+              <div class="swiper-slide swiper-slide--video">
+                <a class="video__link video__link--2" href="https://www.youtube.com/embed/Vi5D6FKhRmo">
+                  <img class="video__media--sw" src="https://i.ytimg.com/vi/Vi5D6FKhRmo/maxresdefault.jpg" alt="Au Louvre ! La Vénus de Milo"> 
+                </a>
+                
+                <button class="video__button--sw" aria-label="Play video">
+                  <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
+              </div>
+
+              <div class="swiper-slide swiper-slide--video">
+                <a class="video__link video__link--3" href="https://www.youtube.com/embed/NOhDysLnTvY">
+                  <img class="video__media--sw" src="https://i.ytimg.com/vi/NOhDysLnTvY/maxresdefault.jpg" alt="Promenade dans les collections mésopotamiennes avec Ariane Thomas"> 
+                </a>
+                
+                <button class="video__button--sw" aria-label="Play video">
+                  <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
+              </div>
+
               <div class="swiper-slide  swiper-slide--video">
-                <iframe src="https://www.youtube.com/embed/zp1BXPX8jcU" allowfullscreen loading="lazy"></iframe>
+                <a class="video__link video__link--1" href="https://www.youtube.com/embed/zp1BXPX8jcU">
+                  <img class="video__media--sw" src="https://i.ytimg.com/vi/zp1BXPX8jcU/maxresdefault.jpg" alt="Welcome to the Louvre">  
+                </a>
+                <button class="video__button--sw" aria-label="Play video">
+                  <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>                                                                             
               </div>
 
               <div class="swiper-slide swiper-slide--video">
-                <iframe src="https://www.youtube.com/embed/Vi5D6FKhRmo" allowfullscreen loading="lazy"></iframe>
-              </div>
+                <a class="video__link video__link--5" href="https://www.youtube.com/embed/2OR0OCr6uRE">
+                  <img class="video__media--sw" src="https://i.ytimg.com/vi/2OR0OCr6uRE/maxresdefault.jpg" alt="Petits contes de Printemps - La ruse du Renard ">
+                </a>
 
-              <div class="swiper-slide swiper-slide--video">
-                <iframe src="https://www.youtube.com/embed/NOhDysLnTvY" allowfullscreen loading="lazy"></iframe>
+                <button class="video__button--sw" aria-label="Play video">
+                  <svg width="68" height="48" viewBox="0 0 68 48"><path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__button-icon" d="M 45,24 27,14 27,34"></path></svg>
+                </button>
               </div>
-
-              <div class="swiper-slide swiper-slide--video">
-                <iframe src="https://www.youtube.com/embed/aWmJ5DgyWPI" allowfullscreen loading="lazy"></iframe>
-              </div>
-
-              <div class="swiper-slide swiper-slide--video">
-                <iframe src="https://www.youtube.com/embed/2OR0OCr6uRE" allowfullscreen loading="lazy"></iframe>
-              </div>            
             </div>
             
             <div class="video__swiper-controls-container">            
@@ -387,10 +417,10 @@
         <div class="tickets__inner-container">
           <div class="tickets__image">
             <picture>              
-              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.png">
-              <source media="(min-width: 1024px)" srcset="./assets/img/buy-tickets/aeneas-1024.png">
-              <source media="(min-width: 669px)" srcset="./assets/img/buy-tickets/aeneas-768.png">  
-              <img src="./assets/img/buy-tickets/aeneas-420.png" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
+              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.jpg">
+              <source media="(min-width: 1024px)" srcset="./assets/img/buy-tickets/aeneas-1024.jpg">
+              <source media="(min-width: 669px)" srcset="./assets/img/buy-tickets/aeneas-768.jpg">  
+              <img src="./assets/img/buy-tickets/aeneas-420.jpg" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
             </picture>          
           </div>
   
@@ -469,10 +499,10 @@
 
           <div class="contacts__map">
             <picture>              
-              <source media="(min-width: 1025px)" srcset="./assets/img/map.png">
-              <source media="(min-width: 1024px)" srcset="./assets/img/map-1024.png">
-              <source media="(min-width: 421px)" srcset="./assets/img/map-768.png">       
-              <img src="./assets/img/map-420.png" alt="The Louvre on the map of Paris" loading="lazy">
+              <source media="(min-width: 1025px)" srcset="./assets/img/map.jpg">
+              <source media="(min-width: 1024px)" srcset="./assets/img/map-1024.jpg">
+              <source media="(min-width: 421px)" srcset="./assets/img/map-768.jpg">       
+              <img src="./assets/img/map-420.jpg" alt="The Louvre on the map of Paris" loading="lazy">
             </picture>
           </div>
 
@@ -663,8 +693,8 @@
   
             <div class="overview__image">
               <picture>              
-                <source media="(min-width: 669px)" srcset="./assets/img/popup/popup-louvre.png">          
-                <img src="./assets/img/popup/popup-louvre-420.png" alt="Louvre">
+                <source media="(min-width: 669px)" srcset="./assets/img/popup/popup-louvre.jpg">          
+                <img src="./assets/img/popup/popup-louvre-420.jpg" alt="Louvre">
               </picture>
             </div>
           </div>
@@ -759,12 +789,14 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/welcome-swiper.js"></script>
   <script src="js/video-swiper.js"></script>
+  <script src="js/video.js"></script>
 
   <script src="js/comp-clider.js"></script>
   <script src="js/progress-bar.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/popup.js"></script>
   <script src="js/ripple.js"></script>
-  <script src="js/self-check.js"></script>
+
+  <script src="js/self-check.js"></script>  
 </body>
 </html>
