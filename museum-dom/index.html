@@ -497,24 +497,24 @@
                   <li class="amount-form__item">
                     <label for="basic">Basic 18+</label>
                     <div class="amount-form__inner-cotainer">
-                      <button class="amount-form__button amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                      <button class="amount-form__button amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                       <input class="amount-form__input" type="number" min="0" max="20" value="1" readonly name="basic" id="basic">
                       <button class="amount-form__button amount-form__button--plus" type="button" 
-                      onclick="this.previousElementSibling.stepUp()">+</button>
+                      onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.dispatchEvent(new Event('change'))">+</button>
                     </div>                
                   </li>
     
                   <li class="amount-form__item">
                     <label for="senior">Senior 65+</label>
                     <div class="amount-form__inner-cotainer">
-                      <button class="amount-form__button amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown()">–</button>
+                      <button class="amount-form__button amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                       <input class="amount-form__input" type="number" min="0" max="20" value="1" readonly name="senior" id="senior">
-                      <button class="amount-form__button amount-form__button--plus" type="button" onclick="this.previousElementSibling.stepUp()"> +</button>
+                      <button class="amount-form__button amount-form__button--plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.dispatchEvent(new Event('change'))"> +</button>
                     </div>                
                   </li>             
                 </ul>
 
-                <p class="amount-form__total">Total €<span class="amount-form__sum">220</span></p>
+                <p class="amount-form__total">Total €<span class="amount-form__sum">30</span></p>
               </fieldset>
             </div>
 
@@ -689,9 +689,9 @@
             <li class="details-form__item details-form__item--select">           
               <select class="details-form__select" name="ticket-type">
                 <option disabled selected>Ticket Type</option>
-                <option value="Permanent">Permanent exhibition</option>
-                <option value="Temporary">Temporary exhibition</option>
-                <option value="Combined">Combined Admission</option>
+                <option value="permanent">Permanent exhibition</option>
+                <option value="temporary">Temporary exhibition</option>
+                <option value="combined">Combined Admission</option>
               </select>           
             </li> 
           </ul>
@@ -704,18 +704,18 @@
               <li class="popup-amount-form__item">
                 <label for="popup-basic">Basic 18+ (20 €)</label>
                 <div class="popup-amount-form__inner-cotainer">
-                  <button class="popup-amount-form__button popup-amount-form__button--minus" type="button">–</button>
+                  <button class="popup-amount-form__button popup-amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                   <input class="popup-amount-form__input" type="number" min="0" max="20" value="2" name="basic" id="popup-basic">
-                  <button class="popup-amount-form__button popup-amount-form__button--plus" type="button">+</button>
+                  <button class="popup-amount-form__button popup-amount-form__button--plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.dispatchEvent(new Event('change'))">+</button>
                 </div>                
               </li>
     
               <li class="popup-amount-form__item">
                 <label for="popup-senior">Senior 65+ (10 €)</label>
                 <div class="popup-amount-form__inner-cotainer">
-                  <button class="popup-amount-form__button popup-amount-form__button--minus" type="button">–</button>
+                  <button class="popup-amount-form__button popup-amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                   <input class="popup-amount-form__input" type="number" min="0" max="20" value="2" name="senior" id="popup-senior">
-                  <button class="popup-amount-form__button popup-amount-form__button--plus" type="button">+</button>
+                  <button class="popup-amount-form__button popup-amount-form__button--plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.dispatchEvent(new Event('change'))">+</button>
                 </div>                
               </li>             
             </ul>        
@@ -729,8 +729,10 @@
             <div class="overview__intro">
               <h2 class="overview__title">Overview</h2>
               <p>Tour to Louvre</p>    
-              <p class="overview__date">Friday, August 19</p>
-              <p class="overview__time">16 : 30</p>
+              <p class="overview__date">
+                <span class="overview__date--day">Friday</span>, <span class="overview__date--month">August</span> <span class="overview__date--year">19</span>
+              </p>
+              <p class="overview__time"><span class="overview__time--hrs">16</span> : <span class="overview__time--min">30</span></p>
               <p class="overview__ticket-type">Temporary exhibition</p>
             </div>          
   
@@ -746,18 +748,18 @@
             <div class="total__basic">
               <p class="total__basic-amount">2</p>
               <p class="total__basic-text">Basic (20 €)</p>
-              <p class="total__basic-price">40 €</p>
+              <p class="total__basic-price"><span class="total__basic-sum">40</span> €</p>
             </div>
             <div class="total__senior">
               <p class="total__senior-amount">2</p>
               <p class="total__senior-text">Senior (10 €)</p>
-              <p class="total__senior-price">20 €</p>
+              <p class="total__senior-price"><span class="total__senior-sum">20</span> €</p>
             </div>
           </div>
 
           <div class="overview__price price">
             <p class="price__text">Total:</p>
-            <p class="price__total">60 €</p>
+            <p class="price__total"><span class="price__total-sum">60</span> €</p>
           </div>
         </section>
 
@@ -827,22 +829,22 @@
     </form>
   </div>
 
-  <script src="js/progress-bar.js"></script>
-  <script src="js/video-player.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/video.js"></script>
 
-  <!-- <script src="js/burger.js"></script> -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/welcome-swiper.js"></script>
   <script src="js/video-swiper.js"></script>
-  <script src="js/video.js"></script>
-
+  
   <script src="js/comp-slider.js"></script>
+  <script src="js/progress-bar.js"></script>
+  <script src="js/video-player.js"></script>  
  
-  <script src="js/gallery.js"></script>
+  
   <script src="js/popup.js"></script>
 
-  <!-- <script src="js/self-check.js"></script>   -->
-
-  
+  <!-- <script src="js/self-check.js"></script>   -->  
 </body>
 </html>
