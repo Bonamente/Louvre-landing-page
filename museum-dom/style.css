@@ -1945,9 +1945,47 @@ progress::-moz-progress-bar {
   box-sizing: border-box;
   padding: 0;
 
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--bg-dark);
+
   border: 1px solid var(--bg-dark);
 
   transition: 0.5s linear;
+
+  outline: none;
+}
+
+.popup__form input.invalid-input {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.popup__form input.valid-input {
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+.input-requirements {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 70;
+
+  display: none;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 5px;  
+
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--bg-dark);
+
+  border: 1px solid yellow;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
 
 .popup-left {
@@ -2059,12 +2097,28 @@ progress::-moz-progress-bar {
 }
 
 .popup__form .details-form__date-input,
-.popup__form .details-form__time-input {
+.popup__form .details-form__time-select {
   box-sizing: border-box; 
   width: 100%; 
   height: 45px;
   padding-left: 4px;
   padding-right: 14px;  
+}
+
+.popup__form .details-form__time-select {
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--bg-dark);
+
+  border: 1px solid var(--bg-dark);
+  background-color: var(--white);
+}
+
+.popup__form .details-form__date-input.bigger-padding,
+.popup__form .details-form__time-select.bigger-padding {
+  padding-left: 10px;
 }
 
 .details-form__item--date::before {
@@ -2075,7 +2129,7 @@ progress::-moz-progress-bar {
   content: "Date";
 
   box-sizing: border-box;
-  width: 90px;
+  width: 96px;
   height: 30px;
   padding-top: 7px;
   padding-right: 12px;  
@@ -2105,7 +2159,7 @@ progress::-moz-progress-bar {
   content: "";
 
   box-sizing: border-box;
-  width: 28px;
+  width: 31px;
   height: 30px; 
 
   background-color: var(--white);
@@ -2137,7 +2191,7 @@ progress::-moz-progress-bar {
 
   text-align: right;
 
-  background-color: var(--white);
+  background-color: var(--white);  
   background-image: url("./assets/svg/time.svg");
   background-repeat: no-repeat;
   background-position: 11px 12px;
@@ -2228,10 +2282,6 @@ progress::-moz-progress-bar {
   background-color: var(--white);  
 }
 
-/* .details-form__select option:active {
-  background-color: #E7E7E7;
-} */
-
 .details-form__item--select::before {
   position: absolute;
   top: 1px;
@@ -2265,6 +2315,11 @@ progress::-moz-progress-bar {
   background-position: left 11px;
 
   pointer-events: none;  
+}
+
+.no-pseudo.details-form__item--date::before,
+.no-pseudo.details-form__item--time::before {
+  content: none; 
 }
 
 .popup-form__inner-wrapper {

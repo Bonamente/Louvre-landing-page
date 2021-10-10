@@ -652,7 +652,6 @@
     <button class="popup__close-button"><span class="sr-only">Close popup</span></button>    
    
     <form class="popup__form popup-form">
-
       <div class="popup-left">
         <fieldset class="popup-form__details details-form">
           <legend class="details-form__title">Booking tickets</legend>
@@ -666,24 +665,47 @@
               </p>
     
               <p class="details-form__item--time">
-                <label class="sr-only" for="time">Select visit time</label>           
-                <input class="details-form__time-input" type="time" name="time" id="time">
+                <label class="sr-only" for="time">Select visit time</label>
+                <select class="details-form__time-select" name="time" id="time">
+                  <option value="09 : 00">09:00</option>
+                  <option value="09 : 30">09:30</option>
+                  <option value="10 : 00">10:00</option>
+                  <option value="10 : 30">10:30</option>
+                  <option value="11 : 00">11:00</option>
+                  <option value="11 : 30">11:30</option>
+                  <option value="12 : 00">12:00</option>
+                  <option value="12 : 30">12:30</option>
+                  <option value="13 : 00">13:00</option>
+                  <option value="13 : 30">13:30</option>
+                  <option value="14 : 00">14:00</option>
+                  <option value="14 : 30">14:30</option>
+                  <option value="15 : 00">15:00</option>
+                  <option value="15 : 30">15:30</option>
+                  <option value="16 : 00">16:00</option>
+                  <option value="16 : 30">16:30</option>
+                  <option value="17 : 00">17:00</option>
+                  <option value="17 : 30">17:30</option>
+                  <option value="18 : 00">18:00</option>         
+                </select>
               </p>
             </li>
 
             <li class="details-form__item details-form__item--name">
               <label class="sr-only" for="name">Enter your name</label>           
-              <input class="details-form__name-input" type="text" name="name" id="name" placeholder="Name">
+              <input class="details-form__name-input" type="text" name="name" id="name" placeholder="Name" required>
+              <p class="input-requirements username-requirements">The name must contain between 3 and 15 characters. Only English or Russian letters and spaces can be used.</p>
             </li>
   
             <li class="details-form__item details-form__item--mail">
               <label class="sr-only" for="mail">Enter your email</label>           
-              <input class="details-form__mail-input" type="email" name="mail" id="mail" placeholder="E-mail">
+              <input class="details-form__mail-input" type="email" name="mail" id="mail" placeholder="E-mail" required>
+              <p class="input-requirements mail-requirements">The username in email address must contain between 3 and 15 characters (English letters, numbers, underscore, hyphen) and must not contain spaces.</p>
             </li>
   
             <li class="details-form__item details-form__item--phone">
               <label class="sr-only" for="phone">Enter your phone number</label>           
-              <input class="details-form__phone-input" type="tel" name="phone" id="phone" placeholder="Phone">
+              <input class="details-form__phone-input" type="tel" name="phone" id="phone" placeholder="Phone" required>
+              <p class="input-requirements phone-requirements">The number requires only digits without division or with division (hyphen or space) into two or three digits. The maximum length is 10 digits.</p>
             </li>
   
             <li class="details-form__item details-form__item--select">           
@@ -702,7 +724,7 @@
             <legend class="popup-amount-form__title">Entry Ticket</legend>
             <ul class="popup-amount-form__list">
               <li class="popup-amount-form__item">
-                <label for="popup-basic">Basic 18+ (20 €)</label>
+                <label for="popup-basic">Basic 18+ (<span id="basic-type-price1">20</span> €)</label>
                 <div class="popup-amount-form__inner-cotainer">
                   <button class="popup-amount-form__button popup-amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                   <input class="popup-amount-form__input" type="number" min="0" max="20" value="2" name="basic" id="popup-basic">
@@ -711,7 +733,7 @@
               </li>
     
               <li class="popup-amount-form__item">
-                <label for="popup-senior">Senior 65+ (10 €)</label>
+                <label for="popup-senior">Senior 65+ (<span id="senior-type-price1">10</span> €)</label>
                 <div class="popup-amount-form__inner-cotainer">
                   <button class="popup-amount-form__button popup-amount-form__button--minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.dispatchEvent(new Event('change'))">–</button>
                   <input class="popup-amount-form__input" type="number" min="0" max="20" value="2" name="senior" id="popup-senior">
@@ -730,9 +752,9 @@
               <h2 class="overview__title">Overview</h2>
               <p>Tour to Louvre</p>    
               <p class="overview__date">
-                <span class="overview__date--day">Friday</span>, <span class="overview__date--month">August</span> <span class="overview__date--year">19</span>
+                <span class="overview__date--weekday">Friday</span>, <span class="overview__date--month">August</span> <span class="overview__date--day">19</span>
               </p>
-              <p class="overview__time"><span class="overview__time--hrs">16</span> : <span class="overview__time--min">30</span></p>
+              <p class="overview__time">16 : 30</p>
               <p class="overview__ticket-type">Temporary exhibition</p>
             </div>          
   
@@ -747,12 +769,12 @@
           <div class="overview__total total">
             <div class="total__basic">
               <p class="total__basic-amount">2</p>
-              <p class="total__basic-text">Basic (20 €)</p>
+              <p class="total__basic-text">Basic (<span id="basic-type-price2">20</span> €)</p>
               <p class="total__basic-price"><span class="total__basic-sum">40</span> €</p>
             </div>
             <div class="total__senior">
               <p class="total__senior-amount">2</p>
-              <p class="total__senior-text">Senior (10 €)</p>
+              <p class="total__senior-text">Senior (<span id="senior-type-price2">10</span> €)</p>
               <p class="total__senior-price"><span class="total__senior-sum">20</span> €</p>
             </div>
           </div>
