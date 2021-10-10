@@ -1,12 +1,12 @@
-function findVideos() {
+const findVideos = () => {
   let videos = document.querySelectorAll('.swiper-slide--video');
 
   for (let i = 0; i < videos.length; i += 1) {
       setupVideo(videos[i]);
   }
-}
+};
 
-function setupVideo(video) {
+const setupVideo = (video) => {
   let link = video.querySelector('.video__link');
   let media = video.querySelector('.video__media--sw');
   let button = video.querySelector('.video__button--sw');
@@ -22,18 +22,18 @@ function setupVideo(video) {
 
   link.removeAttribute('href');
   video.classList.add('video--enabled');
-}
+};
 
-function parseMediaURL(media) {
+const parseMediaURL = (media) => {
   let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
   let regexp2 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
   let url = media.src;
   let match = url.match(regexp) || url.match(regexp2);
 
   return match[1];
-}
+};
 
-function createIframe(id) {
+const createIframe = (id) => {
   let iframe = document.createElement('iframe');
 
   iframe.setAttribute('allowfullscreen', '');
@@ -42,12 +42,12 @@ function createIframe(id) {
   iframe.classList.add('video__media');
 
   return iframe;
-}
+};
 
-function generateURL(id) {
+const generateURL = (id) => {
   let query = '?rel=0&showinfo=0&autoplay=1';
 
   return 'https://www.youtube.com/embed/' + id + query;
-}
+};
 
 findVideos();

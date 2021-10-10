@@ -709,22 +709,7 @@ h2 {
   line-height: 38px;
 }
 
-.explore__image {
-  width: 50%;
-  height: 48.61%;
-  padding-top: 15px;
-}
-
-.explore__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  object-fit: fill;
-}
-
-
-/* .explore__comp-container {  
+.explore__comp-container {  
   position: relative;
   margin-top: 1.04%; 
  
@@ -800,7 +785,7 @@ h2 {
   background-color: var(--white);
 
   transform: translateX(-50%);
-} */
+}
 
 /* VIDEO STYLES */
 

@@ -300,20 +300,21 @@ const validate = (e) => {
 };
 
 inputName.addEventListener('input', validate);
+inputMail.addEventListener('input', validate);
+inputPhone.addEventListener('input', validate);
+
 inputName.addEventListener('blur', (e) => { 
   userNameRequirements.style.display = 'none';
 });
 
-inputMail.addEventListener('input', validate);
 inputMail.addEventListener('blur', (e) => {
   mailRequirements.style.display = 'none';
 });
 
-inputPhone.addEventListener('input', validate);
 inputPhone.addEventListener('blur', (e) => {
   phoneRequirements.style.display = 'none';
 });
 
 popupForm.addEventListener('submit', (e) => {
   e.preventDefault();  
-})
+});

@@ -69,4 +69,4 @@ window.onload = function initComparisons() {
       slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + 'px';
     }
   }
-}
+};

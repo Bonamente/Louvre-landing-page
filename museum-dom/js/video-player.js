@@ -135,6 +135,9 @@ const showControls = () => {
 };
 
 const keyboardShortcuts = (e) => {
+  e.preventDefault();
+  // e.stopPropagation();
+
   const { code } = e;
 
   switch (code) {
