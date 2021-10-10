@@ -1683,17 +1683,30 @@ progress::-moz-progress-bar {
 }
 
 .contacts__map {
+  position: relative;
+
+  width: 960px;
+  height: 620px;
+/* 
   width: 66.66%;
-  height: 43.05%;
+  height: 43.05%; */
 }
 
-.contacts__image {
+#map { 
+  position: absolute; 
+  top: 0; 
+  bottom: 0; 
+  
+  width: 100%; 
+}
+
+/* .contacts__image {
   display: block;
   width: 100%;
   height: 100%;
 
   object-fit: cover;
-}
+} */
 
 
 /* FOOTER STYLES */

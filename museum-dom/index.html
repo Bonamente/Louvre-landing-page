@@ -7,7 +7,9 @@
   <title>museum</title>
   <link rel="icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
 </head>
 <body>
   <svg style="display: none">    
@@ -533,12 +535,13 @@
           </div>
 
           <div class="contacts__map">
-            <picture>              
+            <div id="map"></div>
+            <!-- <picture>              
               <source media="(min-width: 1025px)" srcset="./assets/img/map.jpg">
               <source media="(min-width: 1024px)" srcset="./assets/img/map-1024.jpg">
               <source media="(min-width: 421px)" srcset="./assets/img/map-768.jpg">       
               <img src="./assets/img/map-420.jpg" alt="The Louvre on the map of Paris" loading="lazy">
-            </picture>
+            </picture> -->
           </div>
 
         </div>
@@ -858,6 +861,7 @@
  
   
   <script src="js/popup.js"></script>
+  <script src="js/mapbox.js"></script>
 
   <!-- <script src="js/self-check.js"></script>   -->  
 </body>
