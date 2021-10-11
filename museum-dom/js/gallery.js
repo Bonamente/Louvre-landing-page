@@ -37,3 +37,22 @@ const elements = imageNumbers.map((num) => {
 });
 
 pictureInnerContainer.innerHTML = elements.join('\n');
+
+const galleryItems = document.querySelectorAll('.gallery__item');
+
+const appearOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1],
+};
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle('item__show', entry.isIntersecting);
+  });
+},
+appearOptions);
+
+galleryItems.forEach((item) => {
+  appearOnScroll.observe(item);
+});
