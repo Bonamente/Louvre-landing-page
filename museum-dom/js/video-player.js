@@ -155,7 +155,7 @@ const playSpaceShortCut = (e) => {
 };
 
 const speedUp = (e) => {
-  if (e.shiftKey && e.code === 'Comma') {
+  if (e.shiftKey && e.code === 'Period') {
     const prevSpeed = video.playbackRate;
     const curSpeed = prevSpeed + 0.5;
 
@@ -171,7 +171,7 @@ const speedUp = (e) => {
 };
 
 const speedDown = (e) => {
-  if (e.shiftKey && e.code === 'Period') {
+  if (e.shiftKey && e.code === 'Comma') {
     const prevSpeed = video.playbackRate;
     const curSpeed = prevSpeed - 0.5;
 
@@ -186,10 +186,36 @@ const speedDown = (e) => {
   } 
 };
 
-document.addEventListener('keyup', playSpaceShortCut);
-document.addEventListener('keyup', keyboardShortcuts);
-document.addEventListener('keyup', speedUp);
-document.addEventListener('keyup', speedDown);
+const videoOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: [0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1],
+};
+
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      document.removeEventListener('keyup', keyboardShortcuts);
+      document.removeEventListener('keyup', speedUp);
+      document.removeEventListener('keyup', playSpaceShortCut);
+      document.removeEventListener('keyup', speedDown);
+    } else {
+      document.addEventListener('keyup', playSpaceShortCut);
+      document.addEventListener('keyup', keyboardShortcuts);
+      document.addEventListener('keyup', speedUp);
+      document.addEventListener('keyup', speedDown);
+    }
+  });
+},
+videoOptions);
+
+videoObserver.observe(video);
+
+
+// document.addEventListener('keyup', playSpaceShortCut);
+// document.addEventListener('keyup', keyboardShortcuts);
+// document.addEventListener('keyup', speedUp);
+// document.addEventListener('keyup', speedDown);
 
 mainPlayButton.addEventListener('click', togglePlay);
 playButton.addEventListener('click', togglePlay);
