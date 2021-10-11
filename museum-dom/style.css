@@ -1332,17 +1332,8 @@ progress::-moz-progress-bar {
 
   object-fit: cover;
 
-  -webkit-transition-property: opacity,-webkit-transform;
-  transition-property: opacity,-webkit-transform;
-  -moz-transition-property: transform,opacity,-moz-transform;
-  transition-property: transform,opacity;
-  transition-property: transform,opacity,-webkit-transform,-moz-transform;
-  -webkit-transition-duration: 0.7s;
-  -moz-transition-duration: 0.7s;
   transition-duration: 0.7s;
-  -webkit-transform: scale(0.8, 0.8);;
-  -moz-transform: scale(0.8, 0.8);;
-  transform: scale(0.8, 0.8);;
+  transform: scale(0.8, 0.8);
 }
 
 .gallery__item.item__show img {
@@ -1420,6 +1411,8 @@ progress::-moz-progress-bar {
 
 .tickets__container {
   padding-top: 75px;
+  /* for transition images */
+  padding-bottom: 103px; 
 }
 
 .tickets__inner-container {
@@ -1432,12 +1425,20 @@ progress::-moz-progress-bar {
 }
 
 .tickets__image {
+  position: relative;
   box-sizing: border-box;
-  width: 50%;
+  /* width: 50%; */
+
+  width: 720px;
+  height: 550px;  
   padding-top: 7.15%;
 }
 
 .tickets__image img {
+  position: absolute;
+  top: 100px;
+  left: 0;
+
   display: block;
   width: 100%;
   height: 100%;
