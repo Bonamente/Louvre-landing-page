@@ -2845,6 +2845,14 @@ progress::-moz-progress-bar {
 
 /*+++++++++++++++++++ RESPONSIVE STYLES ++++++++++++++++++++++*/
 
+@media (max-width: 1500px) {
+  .tickets__image {
+    margin-right: 1%;
+     margin-bottom: 7%;
+  }
+}
+
+
 @media (max-width: 1460px) {
   h2 {    
     font-size: 50px;
@@ -3967,11 +3975,13 @@ progress::-moz-progress-bar {
 
   .tickets__image {    
     width: 61%;    
-    margin-right: 60px;    
-  }
+    margin-right: 60px;
+    margin-bottom: 5%;
+  } 
 
   .tickets__image img {
-    height: auto;
+    top: unset;
+    height: 100%;
   }
 
   .tickets__form {  
