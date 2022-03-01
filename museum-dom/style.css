@@ -19,7 +19,11 @@
   --container-width: 1440px;
 
   --grid-row-gap: 24px;
-  --grid-column-gap: 36px;  
+  --grid-column-gap: 36px;
+
+  --slider-width: 720px;
+  --slider-height: 701px; 
+  --explore-img-mt: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -33,7 +37,10 @@
     --container-width: 984px;
   
     --grid-row-gap: 24px;
-    --grid-column-gap: 36px;  
+    --grid-column-gap: 36px;
+
+    --slider-height: 700px;
+    --explore-img-mt: 62px;
   }
 }
 
@@ -53,6 +60,10 @@
     --container-width: 728px;
     
     --grid-column-gap: 24px;
+
+    --slider-width: calc(100vw - 44px);
+    --slider-height: calc(100vw - 66px);
+    --explore-img-mt: 66px; 
   }
 }
 
@@ -64,6 +75,10 @@
     --font4: 16px;
   
     --container-width: 380px;
+
+    --slider-width: 100%;
+    --slider-height: calc(100vw - 53px);
+    --explore-img-mt: 62px;
   }
 }
 
@@ -235,8 +250,7 @@ h2 {
 
 .page-header__logo {
   display: flex;
-  width: 199px;
-  /* margin-right: 32.3%; */
+  width: 199px;  
 }
 
 .page-header__logo-image {
@@ -293,11 +307,6 @@ h2 {
   list-style-type: none;
 }
 
-/* .main-nav__item:not(:last-of-type) {
-  margin-right: 55px;
-  margin-right: 7%;
-} */
-
 .main-nav__item {
  padding-left: 2px;
 }
@@ -349,14 +358,11 @@ h2 {
 
   width: 41.5%;
   height: 26.94%;
-  /* width: 598px; */
-  /* height: 388px; */
 
   pointer-events: none;
 }
 
-.welcome__title {
-  /* margin-bottom: 25px; */
+.welcome__title {  
   margin-bottom: 4.18%;
 
   transition: all 0.7s;
@@ -402,15 +408,11 @@ h2 {
 .welcome__swiper {
   position: relative;
 
-  /* width: 1000px; */
-  /* height: 750px; */
   width: 69.4%;
   height: 52%;
   margin-right: 0;
   margin-left: auto;
   padding-bottom: 4.16%;
-  /* padding-bottom: 60px; */
-
 }
 
 .welcome__swiper::after {
@@ -454,11 +456,6 @@ h2 {
   height: 120px; 
   padding-left: 7.4%;
   padding-right: 7.5%;
-
-  /* width: 600px;
-  height: 120px; */
-  /* padding-left: 74px;
-  padding-right: 75px; */
 
   background-color: var(--bg-dark);
 }
@@ -693,12 +690,11 @@ h2 {
 
 .explore__descritpion { 
   width: 45.8%;
-  /* width: 660px; */
+  margin-right: 0.5%;
 }
 
 .explore__title {
-  margin-bottom: 15.6%;
-  /* margin-bottom: 103px; */
+  margin-bottom: 15.6%;  
 }
 
 .explore__descritpion p {
@@ -709,82 +705,58 @@ h2 {
   line-height: 38px;
 }
 
-.explore__comp-container {  
+.explore__slider {
   position: relative;
-  margin-top: 1.04%; 
- 
-  width: 50%;  
-  height: 700px;
 
+  width: var(--slider-width);
+  height: var(--slider-height);
+  margin-top: var(--explore-img-mt);
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+  user-select: none;
+}
+
+.explore__slider-after,
+.explore__slider-before {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.explore__slider-before {
+  clip-path: polygon(0% 0%, 61% 0%, 61% 100%, 0% 100%);
   overflow: hidden;
 }
 
-.explore__img {
+.explore__slider-resizer {
   position: absolute;
+  top: 0;
+  left: 59.5%;
+  bottom: 0;
 
-  width: auto;
-  height: auto;
-
-  overflow: hidden;
-}
-
-.explore__img img {
-  display: block;
-  max-width: unset;
-}
-
-.explore__comp-slider {
-  position: absolute;
-  top: 15px;
-  z-index: 9;
-  
-  box-sizing: border-box;
   width: 40px;
-  height: 40px; 
+  height: 100%;
 
-  background-color: transparent; 
-  border: 5px solid var(--white);
-  border-radius: 50%; 
+  background-image: url('./assets/img/explore-slider/delimiter.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 
-  cursor: ew-resize;
+  cursor: pointer;
+  pointer-events: none;
 }
 
-.explore__comp-slider::before {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
+.explore__slider-range {
+  position: relative;
 
-  z-index: 15;
-  cursor: ew-resize;
+  width: calc(100% - 40px);
+  height: 100%;
+  margin-right: 20px;
 
-  content: "";
-  
-  box-sizing: border-box;
-  width: 5px;
-  height: 350px;
-
-  background-color: var(--white);
-
-  transform: translateX(-50%);
-}
-
-.explore__comp-slider::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-
-  z-index: 15;
-  cursor: ew-resize;
-
-  content: "";
-  
-  box-sizing: border-box;
-  width: 5px;
-  height: 350px;
-
-  background-color: var(--white);
-
-  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 0;
 }
 
 /* VIDEO STYLES */
@@ -820,15 +792,6 @@ h2 {
 
   width: 100%;
 }
-
-/* .video__content {
-  display: block;
-  width: 100%;
-} */
-
-/* .video__main {
-  width: 100%;
-} */
 
 .video__container {
   position: relative;
@@ -1261,8 +1224,7 @@ progress::-moz-progress-bar {
 }
 
 .gallery__picture-container {
-  height: 1960px;
-  /* height: 300vh; */
+  height: 1960px;  
   overflow-y: hidden;
 }
 
@@ -1360,21 +1322,13 @@ progress::-moz-progress-bar {
   top: calc(var(--grid-row-gap) * 2);  
 }
 
-.gallery__item:nth-child(9) {
-  /* grid-row-end: span 4; */
+.gallery__item:nth-child(9) {  
   overflow: hidden;
 }
 
-.gallery__item:nth-child(9) .gallery__ratio {
-  /* position: absolute; */
+.gallery__item:nth-child(9) .gallery__ratio {  
   width: 100%;
 }
-
-/* 
-.gallery__item:nth-child(10) {
-  grid-row-end: span 2;
-  overflow: hidden;
-} */
 
 .gallery__item:nth-child(10) .gallery__ratio {
   position: absolute;
@@ -1430,8 +1384,7 @@ progress::-moz-progress-bar {
 
 .tickets__image {
   position: relative;
-  box-sizing: border-box;
-  /* width: 50%; */
+  box-sizing: border-box;  
 
   width: 720px;
   height: 550px;  
@@ -1453,8 +1406,6 @@ progress::-moz-progress-bar {
 .tickets__form {
   box-sizing: border-box;
   width: 45.83%;
-  /* width: 660px; */
-
   padding-top: 7.15%;
 }
 
@@ -1557,9 +1508,7 @@ progress::-moz-progress-bar {
 }
 
 .amount-form__title {
-  margin-bottom: 25px;
-
-  /* text-align: right; */
+  margin-bottom: 25px; 
 }
 
 .amount-form__item {
@@ -1682,7 +1631,6 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
-
 /* CONTACTS STYLES */
 
 .contacts {
@@ -1784,9 +1732,9 @@ progress::-moz-progress-bar {
 
 .page-footer__logo {
   display: flex;
+
   width: 199px;
-  margin-right: 9.9%;
-  /* margin-right: 141px; */
+  margin-right: 9.9%;  
   padding-top: 8px;
 }
 
@@ -1816,8 +1764,7 @@ progress::-moz-progress-bar {
   padding: 0;
   
   columns: 2;
-  column-gap: 125%;
-  /* column-gap: 155px; */
+  column-gap: 125%;  
 
   list-style: none;
 }

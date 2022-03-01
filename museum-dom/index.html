@@ -343,13 +343,15 @@
             any way, but because it looked different.</p>
         </div>
 
-        <div class="explore__comp-container">
-          <div class="explore__img">
-            <img src="./assets/img/explore-slider/after.jpg" alt="Las Meninas (Diego Velázquez) after restoration">
-          </div>
-          <div class="explore__img explore__overlay">
-            <img src="./assets/img/explore-slider/before.jpg" alt="Las Meninas (Diego Velázquez) before restoration">
-          </div>
+        <div class="explore__slider">
+          <img class="explore__slider-after" id="exploreAfter" loading="lazy"
+            src="./assets/img/explore-slider/after.jpg" alt="Las Meninas (Diego Velázquez) after restoration">
+
+          <img class="explore__slider-before" id="exploreBefore" loading="lazy"
+            src="./assets/img/explore-slider/before.jpg" alt="Las Meninas (Diego Velázquez) before restoration">
+
+          <div class="explore__slider-resizer" id="exploreResizer"></div>
+          <input class="explore__slider-range" id="exploreRange" type="range" min="0" max="100" value="59.5" />
         </div>
       </div>
     </section>
@@ -530,14 +532,6 @@
             <img class="tickets__img" src="./assets/img/buy-tickets/gallery/8.jpeg" alt="" loading="lazy">
             <img class="tickets__img" src="./assets/img/buy-tickets/gallery/9.jpeg" alt="" loading="lazy">
             <img class="tickets__img" src="./assets/img/buy-tickets/gallery/10.jpeg" alt="" loading="lazy">
-
-            <!--
-            <picture>              
-              <source media="(min-width: 1025px)" srcset="./assets/img/buy-tickets/1.jpg">
-              <source media="(min-width: 1024px)" srcset="./assets/img/buy-tickets/aeneas-1024.jpg">
-              <source media="(min-width: 669px)" srcset="./assets/img/buy-tickets/aeneas-768.jpg">  
-              <img src="./assets/img/buy-tickets/aeneas-420.jpg" alt="Venus Presenting Aeneas with Armour Forged by Vulcan (Pompeo Girolamo Batoni)" loading="lazy">
-            </picture>           -->
           </div>
 
           <form class="tickets__form form">
