@@ -211,12 +211,6 @@ videoOptions);
 
 videoObserver.observe(video);
 
-
-// document.addEventListener('keyup', playSpaceShortCut);
-// document.addEventListener('keyup', keyboardShortcuts);
-// document.addEventListener('keyup', speedUp);
-// document.addEventListener('keyup', speedDown);
-
 mainPlayButton.addEventListener('click', togglePlay);
 playButton.addEventListener('click', togglePlay);
 video.addEventListener('play', updatePlayButton);

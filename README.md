@@ -1,2 +1,12 @@
-# bonamente-JSFE2021Q3
-Private repository for @bonamente
+# The Louvre museum 
+ A responsive landing page
+ 
+## Technologies
+- **JavaScript**
+- **CSS**
+- **Swiper**
+- **Google Street View API**
+- **Mapbox API**
+
+### Deploy
+https://louvre-landing-page.netlify.app/
