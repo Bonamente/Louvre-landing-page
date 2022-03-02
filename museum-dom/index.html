@@ -876,7 +876,8 @@
 
             <li class="card-form__item card-form__item--number">
               <label for="number">Card number</label>
-              <input class="card-form__number-input" type="text" name="card-number" id="number">
+              <input class="card-form__number-input" name="card-number" id="number" type="tel" inputmode="numeric"
+                pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx">
             </li>
 
             <li class="card-form__item card-form__item--expiration">
@@ -886,32 +887,32 @@
                   <label class="sr-only" for="month">Enter your card expiration month</label>
 
                   <div class="card-form__button-cotainer">
-                    <button class="card-form__button card-form__button--plus" type="button">
+                    <button class="card-form__button card-form__button--plus" type="button" id="month-increase">
                       <span class="sr-only">increase</span>
                     </button>
-                    <button class="card-form__button card-form__button--minus" type="button">
+                    <button class="card-form__button card-form__button--minus" type="button" id="month-decrease">
                       <span class="sr-only">decrease</span>
                     </button>
                   </div>
 
-                  <input class="card-form__month-input" type="number" name="expiration-month" min="0" max="12"
-                    value="03" id="month">
+                  <input class="card-form__month-input" type="number" name="expiration-month" min="01" max="12"
+                    value="03" readonly id="month">
                 </div>
 
                 <div class="card-form__item card-form__item--year">
                   <label class="sr-only" for="year">Enter your card expiration year</label>
 
                   <div class="card-form__button-cotainer">
-                    <button class="card-form__button card-form__button--plus" type="button">
+                    <button class="card-form__button card-form__button--plus" type="button" id="year-increase">
                       <span class="sr-only">increase</span>
                     </button>
-                    <button class="card-form__button card-form__button--minus" type="button">
+                    <button class="card-form__button card-form__button--minus" type="button" id="year-decrease">
                       <span class="sr-only">decrease</span>
                     </button>
                   </div>
 
-                  <input class="card-form__year-input" type="number" name="expiration-year" min="2021" max="2050"
-                    value="2024" id="year">
+                  <input class="card-form__year-input" type="number" name="expiration-year" min="2022" max="2050"
+                    value="2024" readonly id="year">
                 </div>
               </div>
             </li>
@@ -923,7 +924,8 @@
 
             <li class="card-form__item card-form__item--cvc">
               <label for="cvc">CVC/CVV</label>
-              <input class="card-form__cvc-input" type="text" name="cvc" id="cvc">
+              <input class="card-form__cvc-input" name="cvc" id="cvc" type="tel" inputmode="numeric"
+                pattern="[0-9\s]{3,4}" autocomplete="cc-csc" maxlength="4">
 
               <p class="cvv-text">The last <br>
                 3 or 4 digits <br>

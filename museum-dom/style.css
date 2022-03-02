@@ -2637,7 +2637,8 @@ progress::-moz-progress-bar {
 
 .card-form input {
   height: 35px;
-  border: none
+  padding: 0 9px;
+  border: none;
 }
 
 .card-form__item--expiration {
@@ -4542,44 +4543,25 @@ progress::-moz-progress-bar {
   .video__controls {
     height: 54px;
     padding-top: 4px;
-    padding-left: 5%;
-    padding-right: 1.7%;
+    padding-left: 1%;
+    padding-right: 3%;
   }
 
   .video__progress--video {
-    position: absolute;
-    left: -2px;
+    position: absolute;    
     bottom: 48px;
     width: 100%;
     height: 4px;
   }
 
   .video__progress--volume {
-    width: 56.2%;
+    width: 20%;
   }
 
   .video__progress::-webkit-slider-thumb {
     width: 10px;
     height: 10px;
-  }
-
-  .video__button--play {
-    width: 14px;
-    height: 18px;    
-    margin-right: 8.8%;
-  }
-
-  .video__button--volume {
-    width: 18px;
-    height: 14px;
-    margin-right: 8%;
-  }
-
-  .video__button--fullscreen {
-    width: 18px;
-    height: 18px;
-    margin-left: 8%;
-  }
+  } 
 
   .video__swiper {
     margin-top: 10.5%;
@@ -4650,6 +4632,8 @@ progress::-moz-progress-bar {
 
   .amount-form__title {
     margin-bottom: 15px;
+    padding-top: 15px;
+
     font-size: 16px;
     line-height: 19px;
   }

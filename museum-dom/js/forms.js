@@ -40,6 +40,14 @@ const popupTotalBasicSumInfo = document.querySelector('.total__basic-sum');
 const popupTotalSeniorSumInfo = document.querySelector('.total__senior-sum');
 const popupTotalPriceInfo = document.querySelector('.price__total-sum');
 
+const cardMonth = document.getElementById('month');
+const cardYear = document.getElementById('year');
+
+const monthIncrease = document.getElementById('month-increase');
+const monthDecrease = document.getElementById('month-decrease');
+const yearIncrease = document.getElementById('year-increase');
+const yearDecrease = document.getElementById('year-decrease');
+
 const getCheckedType = () => {
   const checked = [permanentInput, temporaryInput, combinedInput].find((item) => item.checked);
   return checked.value;
@@ -184,7 +192,7 @@ inputDate.addEventListener('change', (e) => {
   const value = e.target.value;  
   const [year, month, day] = value.split('-');
   const date = new Date(year, month - 1, day);
-  const weekday = date.getDay();
+  const weekday = date.getDay(); 
 
   if (!value) {
     weekdayInfo.textContent = `--`;
@@ -194,7 +202,7 @@ inputDate.addEventListener('change', (e) => {
   }
 
   weekdayInfo.textContent = `${weekdays[weekday]}`;
-  monthInfo.textContent = `${months[month]}`;
+  monthInfo.textContent = `${months[+month]}`;
   dayInfo.textContent = `${day}`;
 });
 
@@ -317,4 +325,35 @@ inputPhone.addEventListener('blur', (e) => {
 
 popupForm.addEventListener('submit', (e) => {
   e.preventDefault();  
+});
+
+[monthIncrease, monthDecrease, yearIncrease, yearDecrease].forEach((el) => {
+  el.addEventListener('click', (e) => {
+    const curEl = e.target;
+
+    switch (curEl) {
+      case monthIncrease: 
+        cardMonth.value = cardMonth.value === cardMonth.max 
+          ? cardMonth.value 
+          : String(+cardMonth.value + 1).padStart(2, "0");
+        break;
+      case monthDecrease: 
+        cardMonth.value = cardMonth.value === cardMonth.min 
+          ? cardMonth.value 
+          : String(+cardMonth.value - 1).padStart(2, "0");
+        break;
+      case yearIncrease: 
+        cardYear.value = cardYear.value === cardYear.max 
+          ? cardYear.value 
+          : +cardYear.value + 1;
+        break;
+      case yearDecrease: 
+        cardYear.value = cardYear.value === cardYear.min 
+          ? cardYear.value 
+          : +cardYear.value - 1;
+        break;
+      default: 
+        throw new Error(`Unknown value: '${curEl}'!`);
+    }
+  })
 });
