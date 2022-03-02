@@ -1677,11 +1677,9 @@ progress::-moz-progress-bar {
 .contacts__map {
   position: relative;
 
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   height: 620px;
-/* 
-  width: 66.66%;
-  height: 43.05%; */
 }
 
 #map { 
@@ -1691,15 +1689,6 @@ progress::-moz-progress-bar {
   
   width: 100%; 
 }
-
-/* .contacts__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-} */
-
 
 /* FOOTER STYLES */
 
@@ -3406,10 +3395,10 @@ progress::-moz-progress-bar {
     font-weight: 300;
   }
   
-  .contacts__map {
+  /* .contacts__map {
     width: 70.53%;
     height: 46.14%;
-  }
+  } */
 
   .page-footer {
     padding-top: 60px;
@@ -3644,9 +3633,7 @@ progress::-moz-progress-bar {
 
   .main-nav {
     width: 100%;
-    min-height: auto;
-    /* padding: 28px 55px 35px; */
-    /* padding: 3.7%, 7.1%, 2.1%; */
+    min-height: auto;    
     padding-top: 3.7%;
     padding-left: 7.1%;
     padding-right: 7.1%;
@@ -3687,8 +3674,7 @@ progress::-moz-progress-bar {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    width: 100%;
-    /* min-height: 355px; */
+    width: 100%;   
     margin: 0;
     margin-bottom: 9.6%;
     padding: 0;
@@ -3710,13 +3696,11 @@ progress::-moz-progress-bar {
   }
 
   .pictures__item {
-    width: 48.5%;
-    /* height: 161px;    */
+    width: 48.5%;    
   }
 
   .pictures__item:first-of-type {
-    width: 100%;
-    /* height: 194px; */
+    width: 100%;    
     margin-bottom: 2%;
   }
 
@@ -4014,13 +3998,11 @@ progress::-moz-progress-bar {
 
   .contacts p {    
     line-height: 21px;    
-  }
+  } 
 
   .contacts__map {
-    width: 100%;
-    height: auto;
-
-    margin-top: 40px;
+    margin-top: 20px;
+    height: 500px;
   }
 
   .page-footer {
@@ -4716,6 +4698,10 @@ progress::-moz-progress-bar {
 
   .contacts p {
     line-height: 19px;
+  }
+
+  .contacts__map {
+    height: 400px;
   }
 
   .page-footer__logo-image {   
