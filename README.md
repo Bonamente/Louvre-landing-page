@@ -1,5 +1,5 @@
 # The Louvre museum 
- A responsive landing page 
+The Louvre Museum's responsive landing page 
   
 ## Technologies
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black)
